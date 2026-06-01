@@ -1,0 +1,69 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "on-click": "activate"
+  },
+
+  "clock": {
+    "format": "<span>󰃭 </span>{:%a %d %b  <span>󱑊 </span>%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+
+  "cpu": { "format": "󰻠 {usage}%" },
+  "memory": { "format": "󰍛 {used:0.1f}G" },
+
+  "network": {
+    "format-wifi": "󰤨 ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤭 ",
+    "tooltip-format": "{essid} {signalStrength}%",
+    "on-click": "kitty bash -c impala"
+  },
+
+  "bluetooth": {
+    "format": "  ",
+    "format-connected": " 󰂱 ",
+    "format-disabled": " 󰂲 ",
+    "on-click": "kitty bash -c bluetui"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 ",
+    "format-icons": { "default": ["󰕿 ", "󰖀 ", "󰕾 "] },
+    "on-click": "kitty bash -c wiremix"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": false
+  }
+}

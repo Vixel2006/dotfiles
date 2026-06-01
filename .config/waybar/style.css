@@ -1,0 +1,123 @@
+@import "mocha.css";
+
+* {
+  font-family: "Lexend", "FiraCode Nerd Font";
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: @base;
+  color: @text;
+  border-bottom: 1px solid @surface1;
+}
+
+/* --- MODULE STYLING --- */
+
+#workspaces {
+  background-color: @surface0;
+  margin: 5px 0 5px 10px;
+  border-radius: 12px;
+}
+
+#workspaces button {
+  color: @overlay2;
+  padding: 0 15px;
+}
+
+#workspaces button.active {
+  color: @sky;
+  background-color: @surface1;
+  border-radius: 12px;
+}
+
+#clock {
+  background-color: @surface0;
+  color: @text;
+  padding: 0 25px;
+  margin: 5px 0;
+  border-radius: 12px;
+}
+
+#clock span {
+  color: @lavender;
+}
+/* --- RIGHT SIDE GROUPS --- */
+
+/* Performance Group */
+#cpu {
+  background-color: @surface0;
+  color: @teal;
+  margin: 5px 0;
+  padding: 0 12px 0 18px;
+  border-radius: 12px 0 0 12px;
+}
+
+#memory {
+  background-color: @surface0;
+  color: @mauve;
+  margin: 5px 0;
+  padding: 0 18px 0 12px;
+  border-radius: 0 12px 12px 0;
+  border-left: 1px solid @surface1; /* Separator inside pill */
+}
+
+/* Connectivity Group (WiFi, BT, Audio) */
+#network {
+  background-color: @surface0;
+  color: @blue;
+  margin: 5px 0 5px 10px;
+  padding: 0 10px 0 18px; /* Extra left padding for rounded edge */
+  border-radius: 12px 0 0 12px;
+}
+
+#bluetooth {
+  background-color: @surface0;
+  color: @sky;
+  margin: 5px 0;
+  padding: 0 15px; /* Wide padding for Bluetooth */
+  border-left: 1px solid @surface1; /* Separator from WiFi */
+}
+
+#pulseaudio {
+  background-color: @surface0;
+  color: @yellow;
+  margin: 5px 0;
+  padding: 0 18px 0 10px;
+  border-radius: 0 12px 12px 0;
+  border-left: 1px solid @surface1;
+}
+
+/* Battery Group */
+#battery {
+  background-color: @surface0;
+  color: @green;
+  margin: 5px 10px;
+  padding: 0 18px;
+  border-radius: 12px;
+}
+
+/* Power Button */
+#custom-power {
+  background-color: @red;
+  color: @base;
+  margin: 5px 10px 5px 0;
+  padding: 0 18px;
+  border-radius: 12px;
+}
+
+/* Spotify Module */
+#custom-spotify {
+  background-color: @surface0;
+  color: @green;
+  margin: 5px 0;
+  padding: 0 15px;
+  border-radius: 12px;
+}
+
+/* Hover effects for interaction */
+#workspaces button:hover, #clock:hover, #battery:hover, #network:hover, #bluetooth:hover, #pulseaudio:hover, #custom-spotify:hover {
+  background-color: @surface1;
+}
