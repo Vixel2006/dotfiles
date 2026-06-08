@@ -4,6 +4,7 @@ local options = {
     go = { "gofmt" },
     c = { "clang-format" },
     cpp = { "clang-format" },
+    cuda = { "clang-format" },
     python = { "black" },
     zig = { "zigfmt" },
 
